@@ -1,8 +1,14 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 
 const Product = (props) => {
-    const { img, name, seller, price, shipping } = props.product;
+    const { _id, img, name, seller, price, shipping } = props.product;
+    const history = useHistory();
+
+    const handleDetailsClick = () => {
+        history.push(`/products/${_id}`);
+    }
 
     return (
         <div>
@@ -16,7 +22,7 @@ const Product = (props) => {
                             <p>{price}</p>
                             <p>{shipping}</p>
                             <div className='d-flex justify-content-between align-items-center'>
-                            <button className='btn btn-secondary rounded w-50 me-2'>Details</button>
+                            <button onClick={handleDetailsClick} className='btn btn-secondary rounded w-50 me-2'>Details</button>
                             <button className='btn btn-primary rounded w-50'>Add Cart</button>
                             </div>
                         </Card.Text>
