@@ -6,14 +6,7 @@ const Home = () => {
     return (
         <div>
             <div>
-                <div className="row">
-                    <div className="col-md-9">
-                        <Products></Products>
-                    </div>
-                    <div className="col-md-3">
-                        <Cart></Cart>
-                    </div>
-                </div>
+                <Products></Products>
             </div>
 
         </div>

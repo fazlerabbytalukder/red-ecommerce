@@ -4,6 +4,7 @@ import Home from './pages/Home/Home/Home';
 import Header from './pages/Shared/Header/Header';
 import Cart from './pages/Home/Cart/Cart';
 import ProductDetails from './pages/Home/ProductDetails/ProductDetails';
+import PlaceOrder from './pages/Home/PlaceOrder/PlaceOrder';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route path='/home'>
             <Home></Home>
+          </Route>
+          <Route path='/placeOrder'>
+            <PlaceOrder></PlaceOrder>
           </Route>
           <Route path='/products/:productId'>
             <ProductDetails></ProductDetails>

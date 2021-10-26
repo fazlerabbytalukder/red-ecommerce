@@ -8,7 +8,7 @@ const Products = () => {
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
 
-    const size = 12;
+    const size = 6;
     useEffect(() => {
         fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
             .then(res => res.json())
